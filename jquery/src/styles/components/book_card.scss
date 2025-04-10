@@ -1,0 +1,27 @@
+@import '../variables/variables.scss';
+
+.feature_book_container {
+    display: flex;
+    flex-direction: row;
+
+    .book_card {
+        box-shadow: 10px 10px 50px 0px $light_gray;
+        background-color: $white;
+        width: 150px;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        h2 {
+            font-weight: 600;
+            font-size: 1.25rem;
+        }
+
+        h3 {
+            font-weight: 300;
+            font-size: 1rem;
+        }
+    }
+}

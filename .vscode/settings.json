@@ -1,6 +1,7 @@
 {
     "liveSassCompile.settings.includeItems": [
-        "/typescript/src/styles/main.scss"
+        "/typescript/src/styles/main.scss",
+        "/jquery/src/styles/main.scss"
     ],
     "liveServer.settings.port": 5501,
 }

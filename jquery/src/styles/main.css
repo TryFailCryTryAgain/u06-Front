@@ -193,4 +193,27 @@ legend {
 
 .browse_books:hover {
   color: #00ccff;
+}
+
+.feature_book_container {
+  display: flex;
+  flex-direction: row;
+}
+.feature_book_container .book_card {
+  box-shadow: 10px 10px 50px 0px #cacaca;
+  background-color: #FAFAFA;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.feature_book_container .book_card h2 {
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+.feature_book_container .book_card h3 {
+  font-weight: 300;
+  font-size: 1rem;
 }/*# sourceMappingURL=main.css.map */
