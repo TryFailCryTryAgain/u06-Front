@@ -43,19 +43,23 @@ $(document).ready(function () {
     $('#fetch').on('click', fetchUserData);
 
     function FeaturedBooks() {
-
-        const result = $('#featured_books');
+        
         $.get(userUrl)
             .done(function(data) {
-                console.log(`Data Recived: ${data}`);
-
+                console.log('Data Received:', data);
+    
                 if (Array.isArray(data)) {
                     const limit = 5;
                     const limitedData = data.slice(0, limit);
-
-                    let bookList = limitedData.map(book => `<div class=book_card><h2>${book.title}</h2><h3>${book.price}</h3></div>`).join('');
-                
-                    $('#results').append(`${bookList}`);
+    
+                    let bookList = limitedData.map(book => `
+                        <div class="book_card">
+                            <h2>${book.title}</h2>
+                            <h3>$${book.price}</h3>
+                        </div>
+                    `).join('');
+                    
+                    $('#results').append(bookList);
                 } else {
                     $('#results').html('<p>No valid book data found</p>');
                 }
@@ -65,4 +69,6 @@ $(document).ready(function () {
                 $('#results').html('<p>Error loading data</p>');
             });
     }
+
+    FeaturedBooks();
 });
