@@ -49,7 +49,7 @@ $(document).ready(function () {
                 console.log('Data Received:', data);
     
                 if (Array.isArray(data)) {
-                    const limit = 5;
+                    const limit = 6;
                     const limitedData = data.slice(0, limit);
     
                     let bookList = limitedData.map(book => `
@@ -59,16 +59,72 @@ $(document).ready(function () {
                         </div>
                     `).join('');
                     
-                    $('#results').append(bookList);
+                    $('#featured_books').append(bookList);
                 } else {
-                    $('#results').html('<p>No valid book data found</p>');
+                    $('#featured_books').html('<p>No valid book data found</p>');
                 }
             })
             .fail(function(error) {
                 console.error('Error:', error);
-                $('#results').html('<p>Error loading data</p>');
+                $('#featured_books').html('<p>Error loading data</p>');
             });
     }
 
-    FeaturedBooks();
+    $(document).ready(function () {
+        FeaturedBooks();
+    });
+
+
+    // Drop down menu - Homepage
+
+    function fetchAndPopulateGenres() {
+        $.get(userUrl)
+            .done(function(data) {
+                if (Array.isArray(data) && data.length > 0) {
+                    const genres = [...new Set(data.map(book => book.genre))];
+                    
+                    const dropdownMenu = $('.dropdown-menu');
+                    dropdownMenu.empty();
+                    
+                    genres.forEach(genre => {
+                        dropdownMenu.append(
+                            `<li><a href="#" class="genre-link" data-genre="${genre}">${genre}</a></li>`
+                        );
+                    });
+                    
+                    $('.genre-link').click(function(e) {
+                        e.preventDefault();
+                        const genre = $(this).data('genre');
+                        const encodedGenre = encodeURIComponent(genre);
+                        const basePath = window.location.pathname.includes('/jquery/src/') ? '/jquery/src' : '';
+                        window.location.href = `${basePath}/pages/book_genre.html?genre=${encodedGenre}`;
+                    });
+                }
+            })
+            .fail(function(error) {
+                console.error('Error fetching genres:', error);
+                $('.dropdown-menu').html('<li>Error loading genres</li>');
+        });
+    }
+
+    function initDropdown() {
+        $('.dropdown-toggle').click(function(e) {
+            e.preventDefault();
+            $(this).siblings('.dropdown-menu').toggle();
+        });
+        
+        $(document).click(function(e) {
+            if (!$(e.target).closest('.dropdown').length) {
+                $('.dropdown-menu').hide();
+            }
+        });
+        
+        $('.dropdown-menu').click(function(e) {
+            e.stopPropagation();
+        });
+    }
+
+    initDropdown();
+    fetchAndPopulateGenres();
+    
 });

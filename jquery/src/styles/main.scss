@@ -7,6 +7,7 @@
 
 // Page style files
 @use './pages/homepage.scss';
+@use './pages/book_genre.scss';
 
 // Structure style page files;
 @use './structure/homepage_structure.scss';
@@ -18,3 +19,4 @@
 // Indivual components
 @use './buttons/browse_books.scss';
 @use './components/book_card.scss';
+@use './components/genre_book_card.scss';

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>u06 - Structure</title>
-    <link href="./styles/main.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/main.css" rel="stylesheet" type="text/css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
@@ -25,27 +25,28 @@
             </ul>
         </nav>
     </header>
-    <main class="homepage">
-        <section class="homepage_title">
-            <h2>Welcome to Book Store Title</h2>
-            <h3>Discover your next favorit book in our vast collection</h3>
-            <a class="browse_books" id="browse_books" href="#">Browse Books</a>
+    <main class="book_genre">
+        <section class="upper_section">
+            <h2 class="book_genre_title" id="book_genre_title"><!-- Dynamic Genre Title--></h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore, deserunt deleniti corrupti assumenda, repellendus, est voluptate eligendi delectus minima sit vero a impedit alias harum inventore. Ipsam voluptatum dolorum quibusdam?</p>
         </section>
-        <section class="feature_books">
-            <h2>Feature Books</h2>
-            <div class="feature_book_container" id="featured_books">
-                <div class="book_card">
-                    <h2>Title</h2>
-                    <h3>Price</h3>
-                </div>
+        <div class="widebar">
+            <!-- Search bar regarding the books shown below -->
+        </div>
+        <div class="genre_books" id="books-container">
+            <div class="genre_book_card">
+                <h2 class="book_title">Title</h2>
+                <h3 class="author">Author</h3>
+                <h3 class="price">Price</h3>
+                <button class="add_to_cart">Add to Cart</button>
             </div>
-            <!-- Add dynamic content thru book cards -->
-        </section>
+            <!-- Dynamically displayed books depending on the genre-->
+        </div>
     </main>
     <footer class="footer">
         <p>&copy; 2024 David Segerbo</p>
     </footer>
-    <script src="./common/script.js" defer></script>   
-    <script src="./common/dropdown.js" defer></script> 
+    <script src="../common/book_genre.js" defer></script>
+    <script src="../common/dropdown.js" defer></script>    
 </body>
 </html>

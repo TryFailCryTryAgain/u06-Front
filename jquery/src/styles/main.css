@@ -101,6 +101,40 @@ legend {
   padding: 0;
 }
 
+.book_genre {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+}
+.book_genre .widebar {
+  width: 100vw;
+  background-color: #D3DAFF;
+  height: 70px;
+}
+.book_genre .upper_section {
+  display: flex;
+  width: 100%;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 20px;
+  text-align: center;
+}
+.book_genre .upper_section .book_genre_title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  order: 1;
+}
+.book_genre .upper_section p {
+  order: 2;
+  max-width: 60%;
+  margin: 0 auto;
+}
+
 .homepage {
   height: 100vh;
   display: flex;
@@ -153,6 +187,7 @@ legend {
   width: 100vw;
   background-color: #010727;
   color: #FAFAFA;
+  z-index: 3;
 }
 .navbar .nav-list {
   display: flex;
@@ -169,14 +204,45 @@ legend {
 .navbar .nav-list ul .nav-item {
   list-style-type: none;
   padding: 0 10px;
+  position: relative;
+  /* Dropdown specific styles */
 }
 .navbar .nav-list ul .nav-item a {
   color: #FAFAFA;
   text-decoration: none;
+  display: block;
+  padding: 5px 0;
 }
 .navbar .nav-list ul .nav-item a:hover {
   color: #00ccff;
   transition: all 0.3s ease;
+}
+.navbar .nav-list ul .nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+.navbar .nav-list ul .nav-item .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #010727;
+  min-width: 180px;
+  padding: 10px 0;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+.navbar .nav-list ul .nav-item .dropdown-menu li {
+  padding: 0;
+  list-style-type: none;
+}
+.navbar .nav-list ul .nav-item .dropdown-menu li a {
+  padding: 8px 15px;
+  color: #FAFAFA;
+}
+.navbar .nav-list ul .nav-item .dropdown-menu li a:hover {
+  color: #00ccff;
+  background-color: #021059;
 }
 
 .browse_books {
@@ -198,16 +264,21 @@ legend {
 .feature_book_container {
   display: flex;
   flex-direction: row;
+  margin-top: 20px;
 }
 .feature_book_container .book_card {
   box-shadow: 10px 10px 50px 0px #cacaca;
   background-color: #FAFAFA;
-  width: 150px;
+  width: 200px;
   height: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin: 0 20px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 5px;
 }
 .feature_book_container .book_card h2 {
   font-weight: 600;
@@ -216,4 +287,47 @@ legend {
 .feature_book_container .book_card h3 {
   font-weight: 300;
   font-size: 1rem;
+}
+
+.genre_books {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+.genre_books .genre_book_card {
+  box-shadow: 10px 10px 50px 0px #cacaca;
+  background-color: #FAFAFA;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 20px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 5px;
+}
+.genre_books .genre_book_card h2 {
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-top: 10px;
+}
+.genre_books .genre_book_card h3 {
+  margin-top: 10px;
+  font-weight: 300;
+  font-size: 1rem;
+}
+.genre_books .genre_book_card .price {
+  color: #FF0000;
+}
+.genre_books .genre_book_card .add_to_cart {
+  margin-top: 10px;
+  background-color: #00ccff;
+  border-radius: 5px;
+  padding: 6px 12px;
+  font-size: 1rem;
+  color: #FAFAFA;
+  font-weight: 600;
+  text-transform: uppercase;
 }/*# sourceMappingURL=main.css.map */
