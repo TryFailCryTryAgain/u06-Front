@@ -74,9 +74,6 @@ $(document).ready(function () {
         FeaturedBooks();
     });
 
-
-    // Drop down menu - Homepage
-
     function fetchAndPopulateGenres() {
         $.get(userUrl)
             .done(function(data) {
@@ -126,5 +123,4 @@ $(document).ready(function () {
 
     initDropdown();
     fetchAndPopulateGenres();
-    
 });

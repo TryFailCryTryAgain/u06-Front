@@ -110,7 +110,7 @@ legend {
   align-items: center;
 }
 .book_genre .widebar {
-  width: 100vw;
+  width: 100%;
   background-color: #D3DAFF;
   height: 70px;
 }
@@ -133,6 +133,74 @@ legend {
   order: 2;
   max-width: 60%;
   margin: 0 auto;
+}
+
+.contact_page {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 5vh;
+  flex-direction: column;
+  align-items: center;
+}
+.contact_page .container {
+  width: 90%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.contact_page .container .contact_title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.contact_page .container .subcontainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.contact_page .container .subcontainer .info {
+  height: 400px;
+  width: 48%;
+  border-radius: 5px;
+  background-color: #FAFAFA;
+  justify-content: flex-start;
+  padding: 20px;
+  box-shadow: 10px 10px 50px 0px #cacaca;
+}
+.contact_page .container .subcontainer .info h3 {
+  margin: 20px 0;
+  font-size: 1.5rem;
+}
+.contact_page .container .subcontainer .form {
+  height: 400px;
+  width: 48%;
+  border-radius: 5px;
+  background-color: #FAFAFA;
+  justify-content: flex-end;
+  padding: 20px;
+  box-shadow: 10px 10px 50px 0px #cacaca;
+}
+.contact_page .container .subcontainer .form .submit_form {
+  display: flex;
+  flex-direction: column;
+}
+.contact_page .container .subcontainer .form .submit_form input {
+  margin: 10px 0;
+  padding: 0 8px;
+}
+.contact_page .container .subcontainer .form .submit_form input::placeholder {
+  position: absolute;
+  top: 10%;
+  left: 0%;
+  transform: translate(10%, 0%);
+}
+.contact_page .container .subcontainer .form .submit_form .message {
+  height: 100px;
 }
 
 .homepage {
@@ -184,7 +252,7 @@ legend {
 
 .navbar {
   height: 50px;
-  width: 100vw;
+  width: 100%;
   background-color: #010727;
   color: #FAFAFA;
   z-index: 3;
@@ -293,6 +361,7 @@ legend {
   display: flex;
   flex-direction: row;
   margin-top: 20px;
+  height: 400px;
 }
 .genre_books .genre_book_card {
   box-shadow: 10px 10px 50px 0px #cacaca;
@@ -330,4 +399,20 @@ legend {
   color: #FAFAFA;
   font-weight: 600;
   text-transform: uppercase;
+}
+
+.submit {
+  height: 50px;
+  width: 150px;
+  text-transform: uppercase;
+  color: #FAFAFA;
+  background-color: #010727;
+  padding: 12px 24px;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.submit:hover {
+  color: #00ccff;
 }/*# sourceMappingURL=main.css.map */
