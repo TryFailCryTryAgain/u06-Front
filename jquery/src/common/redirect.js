@@ -4,9 +4,18 @@ $(document).ready(function () {
         $('#contact').click(function(e) {
             e.preventDefault();
             const basePath = window.location.pathname.includes('/jquery/src/') ? '/jquery/src' : '';
-            window.location.href = `${basePath}/pages/contact_us.html?genre`;
+            window.location.href = `${basePath}/pages/contact_us.html`;
+        });
+    }
+
+    function RedirectAdmin() {
+        $('#admin').click(function(e) {
+            e.preventDefault();
+            const basePath = window.location.pathname.includes('/jquery/src/') ? '/jquery/src' : '';
+            window.location.href = `${basePath}/pages/admin.html`;
         });
     }
 
     RedirectContact();
+    RedirectAdmin();
 });

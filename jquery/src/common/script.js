@@ -9,6 +9,17 @@ $(document).ready(function () {
 
     const url = `https://restful-api-sca9.onrender.com`;
     const userUrl = 'https://restful-api-sca9.onrender.com/book/';
+    const orderUrl = 'https://restful-api-sca9.onrender.com/order/';
+
+    function fetchOrderData() {
+        $.get(orderUrl)
+            .done(function(data) {
+                console.log(data);
+            })
+            .fail(function(err) {
+                console.log("Error:", err);
+            });
+    }
 
     function fetchUserData() {
         console.log("Event has been registered!");
@@ -123,4 +134,5 @@ $(document).ready(function () {
 
     initDropdown();
     fetchAndPopulateGenres();
+    fetchOrderData();
 });

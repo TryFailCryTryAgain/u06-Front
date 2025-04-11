@@ -9,6 +9,7 @@
 @use './pages/homepage.scss';
 @use './pages/book_genre.scss';
 @use './pages/contact_page.scss';
+@use './pages/admin_page.scss';
 
 // Structure style page files;
 @use './structure/homepage_structure.scss';
@@ -22,3 +23,4 @@
 @use './components/book_card.scss';
 @use './components/genre_book_card.scss';
 @use './buttons/contact_submit.scss';
+@use './buttons/admin_buttons.scss';
