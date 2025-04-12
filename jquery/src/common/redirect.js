@@ -16,6 +16,15 @@ $(document).ready(function () {
         });
     }
 
+    function RedirectUser() {
+        $('#user').click(function(e) {
+            e.preventDefault();
+            const basePath = window.location.pathname.includes('/jquery/src/') ? '/jquery/src' : '';
+            window.location.href = `${basePath}/pages/user.html`;
+        });
+    }
+
     RedirectContact();
     RedirectAdmin();
+    RedirectUser();
 });

@@ -21,12 +21,55 @@
                 <li class="nav-item"><a href="#">Order</a></li>
                 <li class="nav-item"><a href="#">Review</a></li>
                 <li class="nav-item"><a href="#" id="contact">Contact Us</a></li>
-                <li class="nav-item"><a href="#">User</a></li>
+                <li class="nav-item"><a href="#" id="user">User</a></li>
                 <li class="nav-item"><a href="#" id="admin">Admin</a></li>
             </ul>
         </nav>
     </header>
     <main class="admin_page">
+
+        <form action="#" method="PUT">
+            <section class="specific_order" id="specific_order">
+                <h3 class="specific_order_title">Edit Order</h3>
+                <strong>Order ID:</strong>
+                <p>51254fcb12321...</p>
+                <strong>User ID:</strong>
+                <p><span>&#9747;</span>2512sadlkj213...</p>
+                <div class="user_form_group">
+                    <button id="add_user_id">&plus;</button>
+                    <select name="usernames" id="usernames" class="user_control" required>
+                        <option value="">-- Select a username --</option>
+                        <option value="user_id">username</option>
+                        <option value="user_id">username</option>
+                        <option value="user_id">username</option>
+                    </select>
+                </div>
+                <strong>Books:</strong>
+                <p><span>&#9747;</span>213421asdj213...</p>
+                <p><span>&#9747;</span>213833asdj213...</p>
+                <p><span>&#9747;</span>411621asdj296...</p>
+                <!-- Add the newly added book here -->
+                <div class="book_form_group">
+                    <button id="add_book_id">&plus;</button>
+                    <select name="book_titles" id="book_titles" class="book_control" required>
+                        <option value="">-- Select a book title</option>
+                        <option value="book_id">book_id</option>
+                        <option value="book_id">book_id</option>
+                        <option value="book_id">book_id</option>
+                    </select>
+                </div>
+                <p><strong>Order Date: </strong> 2025-03-26</p>
+                <p><strong>Status: </strong>Pending</p>
+                <p><strong>Total Amount: </strong>$23.59</p>
+
+                <div class="specific_order_button_container">
+                    <button type="submit
+                    
+                    ">Confirm</button>
+                    <button>Cancel</button>
+                </div>
+            </section>
+        </form>
 
         <div class="container">
             <h2 class="container_title">Admin</h2>
@@ -78,7 +121,6 @@
                 </section>
             </div>
         </div>
-
     </main>
     <footer class="footer">
         <p>&copy; 2024 David Segerbo</p>

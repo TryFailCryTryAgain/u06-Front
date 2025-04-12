@@ -203,6 +203,20 @@ legend {
   height: 100px;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+body.modal-open .admin_page::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
 .admin_page {
   height: 100vh;
   display: flex;
@@ -210,6 +224,132 @@ legend {
   margin-top: 5vh;
   flex-direction: column;
   align-items: center;
+  position: relative;
+}
+.admin_page .specific_order {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 600px;
+  background-color: #FAFAFA;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 10px 10px 50px 0px #cacaca;
+  z-index: 1000;
+}
+.admin_page .specific_order_title {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: #010727;
+}
+.admin_page .specific_order strong {
+  display: block;
+  margin-top: 15px;
+  color: #010727;
+  font-weight: 600;
+}
+.admin_page .specific_order p {
+  margin: 5px 0 0 0;
+  padding: 8px 0;
+  border-bottom: 1px solid #e4e4e4;
+  color: #7a7a7a;
+}
+.admin_page .specific_order p span {
+  margin-right: 8px;
+  color: #FF0000;
+}
+.admin_page .specific_order .user_form_group {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+}
+.admin_page .specific_order .user_form_group #add_user_id {
+  background-color: #00ccff;
+  color: #FAFAFA;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 1.2rem;
+  margin-right: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+.admin_page .specific_order .user_form_group #add_user_id:hover {
+  background-color: #00a3cc;
+}
+.admin_page .specific_order .user_form_group .user_control {
+  flex-grow: 1;
+  padding: 8px;
+  border: 1px solid #cacaca;
+  border-radius: 5px;
+  background-color: #FAFAFA;
+  color: #7a7a7a;
+}
+.admin_page .specific_order .book_form_group {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+}
+.admin_page .specific_order .book_form_group #add_book_id {
+  background-color: #00ccff;
+  color: #FAFAFA;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 1.2rem;
+  margin-right: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+.admin_page .specific_order .book_form_group #add_book_id:hover {
+  background-color: #00a3cc;
+}
+.admin_page .specific_order .book_form_group .book_control {
+  flex-grow: 1;
+  padding: 8px;
+  border: 1px solid #cacaca;
+  border-radius: 5px;
+  background-color: #FAFAFA;
+  color: #7a7a7a;
+}
+.admin_page .specific_order_button_container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 25px;
+  gap: 15px;
+}
+.admin_page .specific_order_button_container button {
+  padding: 12px 24px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+.admin_page .specific_order_button_container button:first-child {
+  background-color: #00ccff;
+  color: #FAFAFA;
+}
+.admin_page .specific_order_button_container button:first-child:hover {
+  background-color: #00a3cc;
+}
+.admin_page .specific_order_button_container button:last-child {
+  background-color: #FF0000;
+  color: #FAFAFA;
+}
+.admin_page .specific_order_button_container button:last-child:hover {
+  background-color: #cc0000;
 }
 .admin_page .container {
   display: flex;
@@ -393,6 +533,15 @@ legend {
   padding: 12px 24px;
   border-radius: 5px;
   color: #FAFAFA;
+}
+
+.user_page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  margin-top: 5vh;
+  flex-direction: column;
+  align-items: center;
 }
 
 .homepage {
