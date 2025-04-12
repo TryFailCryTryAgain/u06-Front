@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>u06 - Structure</title>
+    <link href="../styles/main.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header class="navbar">
+        <nav class="nav-list">
+            <div class="logo">Book Store Title</div>
+            <ul>
+                <li class="nav-item dropdown">
+                    <a href="#" class="dropdown-toggle">Books</a>
+                    <ul class="dropdown-menu">
+                        <!-- This will be populated dynamically from your API -->
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="#">Order</a></li>
+                <li class="nav-item"><a href="#">Review</a></li>
+                <li class="nav-item"><a href="#" id="contact">Contact Us</a></li>
+                <li class="nav-item"><a href="#">User</a></li>
+                <li class="nav-item"><a href="#" id="admin">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="admin_page">
+
+        <div class="container">
+            <h2 class="container_title">Admin</h2>
+            <div class="button_container">
+                <button class="create_user">Create User</button>
+                <button class="create_book">Create Book</button>
+                <button class="create_review">Create Review</button>
+                <button class="create_order">Create Order</button>
+            </div>
+            <div class="subcontainer">
+                <section class="order_crud">
+                    <h3>Order</h3>
+                    <div class="placed_orders">
+                        <div class="order_container" id="order_container">
+                            <div class="order_info">
+                                <p>Order_id</p>
+                                <p>User_id</p>
+                                <p>Book_ids</p>
+                                <p>Price</p>
+                                <p>Created_at</p>
+                                <p>Arrivel</p>
+                                <p>Price</p>
+                            </div>
+                            <div class="order_buttons">
+                                <button class="edit">Edit</button>
+                                <button class="delete">Delete</button>
+                            </div>
+                        </div>
+                        <!-- Place the dyanmic orders in rows -->
+                    </div>
+                </section>
+                <section class="book_crud">
+                    <h3>Books</h3>
+                    <div class="book_list" id="book_list">
+                        <div class="book_info">
+                            <p>Order_id</p>
+                            <p>User_id</p>
+                            <p>Book_ids</p>
+                            <p>Price</p>
+                            <p>Created_at</p>
+                            <p>Arrivel</p>
+                            <p>Price</p>
+                        </div>
+                        <div class="book_buttons">
+                            <button class="edit">Edit</button>
+                            <button class="delete">Delete</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+    </main>
+    <footer class="footer">
+        <p>&copy; 2024 David Segerbo</p>
+    </footer>
+    <script src="../common/admin.js" defer></script>
+    <script src="../common/dropdown.js" defer></script>
+    <script src="../common/redirect.js"defer></script> 
+</body>
+</html>

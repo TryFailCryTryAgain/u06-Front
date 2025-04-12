@@ -26,29 +26,40 @@
             </ul>
         </nav>
     </header>
-    <main class="book_genre">
-        <section class="upper_section">
-            <h2 class="book_genre_title" id="book_genre_title"><!-- Dynamic Genre Title--></h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore, deserunt deleniti corrupti assumenda, repellendus, est voluptate eligendi delectus minima sit vero a impedit alias harum inventore. Ipsam voluptatum dolorum quibusdam?</p>
-        </section>
-        <div class="widebar">
-            <!-- Search bar regarding the books shown below -->
-        </div>
-        <div class="genre_books" id="books-container">
-            <div class="genre_book_card">
-                <h2 class="book_title">Title</h2>
-                <h3 class="author">Author</h3>
-                <h3 class="price">Price</h3>
-                <button class="add_to_cart">Add to Cart</button>
+    <main class="contact_page">
+
+        <div class="container">
+            <h2 class="contact_title">Contact Us</h2>
+            <div class="subcontainer">
+                <section class="info">
+                    <h3>Get in Touch</h3>
+                    <p><b>Email: </b>Test@email.com</p>
+                    <p><b>Phone: </b>0700000000</p>
+                    <p><b>Adress: </b>Fake Aweny 21st. 721 92</p>
+
+                    <h3>Store Hours</h3>
+                    <p><b>Monday - Friday: </b>8am - 7pm</p>
+                    <p><b>Saturday: </b>9am - 5pm</p>
+                    <p><b>Sunday: </b>10am - 4pm</p>
+                </section>
+                <section class="form">
+                    <h3>Send us a message</h3>
+                    <form action="#" method="post" class="submit_form">
+                        <input type="text" placeholder="Your name" class="username">
+                        <input type="text" placeholder="Your email" class="email">
+                        <input type="text" placeholder="Your message" class="message">
+                        <input type="submit" placeholder="SUBMIT" class="submit">
+                    </form>
+                </section>
             </div>
-            <!-- Dynamically displayed books depending on the genre-->
         </div>
+
+
     </main>
     <footer class="footer">
         <p>&copy; 2024 David Segerbo</p>
     </footer>
-    <script src="../common/book_genre.js" defer></script>
     <script src="../common/dropdown.js" defer></script>
-    <script src="../common/redirect.js"defer></script>    
+    <script src="../common/redirect.js"defer></script> 
 </body>
 </html>
