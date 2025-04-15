@@ -33,43 +33,96 @@
                 <h3 class="specific_order_title">Edit Order</h3>
                 <strong>Order ID:</strong>
                 <p>51254fcb12321...</p>
-                <strong>User ID:</strong>
-                <p><span>&#9747;</span>2512sadlkj213...</p>
-                <div class="user_form_group">
-                    <button id="add_user_id">&plus;</button>
-                    <select name="usernames" id="usernames" class="user_control" required>
-                        <option value="">-- Select a username --</option>
-                        <option value="user_id">username</option>
-                        <option value="user_id">username</option>
-                        <option value="user_id">username</option>
-                    </select>
+                
+                <div class="user_id_section">
+                    <strong>User ID:</strong>
+                    <p><span>&#9747;</span>2512sadlkj213...</p>
                 </div>
-                <strong>Books:</strong>
-                <p><span>&#9747;</span>213421asdj213...</p>
-                <p><span>&#9747;</span>213833asdj213...</p>
-                <p><span>&#9747;</span>411621asdj296...</p>
-                <!-- Add the newly added book here -->
-                <div class="book_form_group">
-                    <button id="add_book_id">&plus;</button>
-                    <select name="book_titles" id="book_titles" class="book_control" required>
-                        <option value="">-- Select a book title</option>
-                        <option value="book_id">book_id</option>
-                        <option value="book_id">book_id</option>
-                        <option value="book_id">book_id</option>
-                    </select>
+                
+                <div class="user_selection_section">
+                    <div class="user_form_group">
+                        <button type="button" id="add_user_id">&plus;</button>
+                        <select name="usernames" id="usernames" class="user_control">
+                            <option value="">-- Select a username --</option>
+                            <option value="user_id">username</option>
+                            <option value="user_id">username</option>
+                        </select>
+                    </div>
                 </div>
+                
+                <div class="books_section">
+                    <strong>Books:</strong>
+                    <p><span>&#9747;</span>213421asdj213...</p>
+                    <p><span>&#9747;</span>213833asdj213...</p>
+                    <p><span>&#9747;</span>411621asdj296...</p>
+                </div>
+                
+                <div class="book_selection_section">
+                    <div class="book_form_group">
+                        <button type="button" id="add_book_id">&plus;</button>
+                        <select name="book_titles" id="book_titles" class="book_control">
+                            <option value="">-- Select a book title</option>
+                            <option value="book_id">book_id</option>
+                            <option value="book_id">book_id</option>
+                            <option value="book_id">book_id</option>
+                        </select>
+                    </div>
+                </div>
+                
                 <p><strong>Order Date: </strong> 2025-03-26</p>
                 <p><strong>Status: </strong>Pending</p>
                 <p><strong>Total Amount: </strong>$23.59</p>
-
+        
                 <div class="specific_order_button_container">
-                    <button type="submit
-                    
-                    ">Confirm</button>
-                    <button>Cancel</button>
+                    <button type="submit">Confirm</button>
+                    <button type="button" id="cancel_specific_order">Cancel</button>
                 </div>
             </section>
         </form>
+
+        <section class="create_order" id="create_order">
+            <h3 class="create_order_title">Create New Order</h3>
+            <form id="create_order_form" action="#" method="POST">
+                
+                <!-- User Selection Section -->
+                <div class="user_selection_section">
+                    <div class="user_form_group">
+                        <label><strong>Select User:</strong></label>
+                        <button type="button" id="add_user_create">&plus;</button>
+                        <select name="usernames" id="usernames_create" class="user_control">
+                            <option value="">-- Select a username --</option>
+                            <!-- User options will be populated dynamically -->
+                        </select>
+                    </div>
+                    <div class="user_id_section">
+                        <strong>Selected User ID:</strong>
+                        <p id="selected_user_id">No user selected</p>
+                    </div>
+                </div>
+                
+                <!-- Book Selection Section -->
+                <div class="book_selection_section">
+                    <div class="book_form_group">
+                        <label><strong>Add Books:</strong></label>
+                        <button type="button" id="add_book_create">&plus;</button>
+                        <select name="book_titles" id="book_titles_create" class="book_control">
+                            <option value="">-- Select a book title --</option>
+                            <!-- Book options will be populated dynamically -->
+                        </select>
+                    </div>
+                    <div class="books_section">
+                        <strong>Selected Books:</strong>
+                        <!-- Selected books will appear here -->
+                    </div>
+                </div>
+                
+                <div class="create_order_button_container">
+                    <button type="submit" id="confirm_create_order">Create Order</button>
+                    <button type="button" id="cancel_create_order">Cancel</button>
+                </div>
+            </form>
+        </section>
+        
 
         <div class="container">
             <h2 class="container_title">Admin</h2>

@@ -1,4 +1,4 @@
-import { BrowseBooksButton } from "./components.js";
+import { BrowseBooksButton } from "./components";
 // Dec.
 document.addEventListener("DOMContentLoaded", () => {
     const button = BrowseBooksButton();

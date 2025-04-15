@@ -1,4 +1,4 @@
-import { BrowseBooksButton } from "./components";
+import { BrowseBooksButton } from "./components.js";
 
 // Dec.
 
