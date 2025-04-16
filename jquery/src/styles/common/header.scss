@@ -1,7 +1,7 @@
 @import '../variables/variables.scss';
 
 .navbar {
-    height: 50px;
+    height: $header_height;
     width: 100%;
     background-color: $dark_blue;
     color: $white;
