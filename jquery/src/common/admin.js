@@ -104,7 +104,6 @@ $(document).ready(function() {
                             });
                         }
                         
-
                     })
                     .fail(function(error) {
                         console.error('Error:', error);
@@ -226,14 +225,12 @@ $(document).ready(function() {
 
                 $('#api-update').click(function() {
 
-                    // Get user ID
                     const userId = $('.user_id_section').find('[data-userid]').data('userid');
                     if (!userId) {
                         alert("Please select a user");
                         return;
                     }
                     
-                    // Get book IDs
                     const bookIds = $('.book-line').map(function() {
                         return $(this).data('bookid');
                     }).get();
@@ -243,13 +240,11 @@ $(document).ready(function() {
                         return;
                     }
                     
-                    // Prepare data
                     const updateData = {
                         userId: userId,
                         bookIds: bookIds
                     };
                     
-                    // Make API call
                     $.ajax({
                         url: `${orderUrl}${orderId}`,
                         type: 'PUT',
@@ -346,11 +341,15 @@ $(document).ready(function() {
     fetchOrders();
     fetchBooks();
 
-
-
-
     // Create order functions - include open up form and then api call
 
+    $(document).on('click', '#open_create_order_form', function () {
+        $(".create_order").css("display", "block");
+    });
+
+    $(document).on('click', '#cancel_create_order', function () {
+        $(".create_order").css("display", "none");
+    });
 
 
 

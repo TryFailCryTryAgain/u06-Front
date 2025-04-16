@@ -362,7 +362,7 @@ legend {
   border-radius: 5px;
   box-shadow: 10px 10px 50px 0px #cacaca;
   z-index: 1000;
-  display: block;
+  display: none;
 }
 .admin_page .create_order_title {
   font-size: 1.5rem;
@@ -898,7 +898,7 @@ legend {
   color: #00ccff;
 }
 
-.create_order {
+.create_order_button {
   height: auto;
   width: auto;
   text-transform: uppercase;
@@ -908,8 +908,9 @@ legend {
   border-radius: 12px;
   text-decoration: none;
   transition: all 0.3s ease;
+  display: block;
 }
 
-.create_order:hover {
+.create_order_button:hover {
   color: #00ccff;
 }/*# sourceMappingURL=main.css.map */

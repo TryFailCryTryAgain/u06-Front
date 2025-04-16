@@ -48,7 +48,7 @@
     color: $cyan;
 }
 
-.create_order {
+.create_order_button {
     height: auto;
     width: auto;
     text-transform: uppercase;
@@ -58,9 +58,10 @@
     border-radius: 12px;
     text-decoration: none;
     transition: all 0.3s ease;
+    display: block;
 }
 
-.create_order:hover {
+.create_order_button:hover {
     color: $cyan;
 }
 
