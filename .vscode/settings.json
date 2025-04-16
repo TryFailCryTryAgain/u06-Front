@@ -3,5 +3,5 @@
         "/typescript/src/styles/main.scss",
         "/jquery/src/styles/main.scss"
     ],
-    "liveServer.settings.port": 5501,
+    "liveServer.settings.port": 5502,
 }
